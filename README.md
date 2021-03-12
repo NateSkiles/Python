@@ -1,2 +1,2 @@
 # Python
- My Python repository
+ I will be updating this repository with my Python projects.
