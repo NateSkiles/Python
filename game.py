@@ -1,5 +1,5 @@
 #
-#   Python:     3.6.4
+#   Python:     3.9.1
 #
 #   Author:     Nathan Skiles
 #
@@ -18,6 +18,7 @@ def start(nice= 0, mean=0, name=""):
     #get user's name
     name = describe_game(name)
     nice,mean,name = nice_mean(nice,mean,name)
+
 
 def describe_game(name):
     """
@@ -41,6 +42,7 @@ def describe_game(name):
                     print("but at the end of the game your fate \nwill be sealed by your actions")
     return name
 
+
 def nice_mean(nice,mean,name):
     stop = True
     while stop:
@@ -56,8 +58,10 @@ def nice_mean(nice,mean,name):
             stop = False
     score(nice,mean,name) # Pass the 3 variables to the score()
 
+
 def show_score(nice,mean,name):
     print('\n{}, your current total: \n({}, Nice) and ({}, Mean)'.format(name,nice,mean))
+
 
 
 def score(nice, mean, name):
@@ -68,6 +72,7 @@ def score(nice, mean, name):
     else:                #else, call nice_mean function passing in the variables so it can use them
         nice_mean(nice,mean,name)
 
+
 def win(nice,mean,name):
     print("\n Nice job {}, you win! \nEveryone loves you and you've made lots of friends along the way!".format(name))
     again(nice,mean,name)
@@ -75,6 +80,7 @@ def win(nice,mean,name):
 def lose(nice, mean, name):
     print("\nAhhh too bad, game over! \n(), you live in a dirty beat-up \nvan by the river, wretched and alone!".format(name))
     again(nice,mean,name)
+
 
 def again():
     stop = True
@@ -90,22 +96,12 @@ def again():
         else:
             print("\nEnter ( Y ) for 'YES', ( N ) for 'NO':\n>>> ")
 
+
 def reset(nice,mean,name):
     nice = 0
     mean = 0
     # Does not reset users name
     start(nice, mean, name)
-
-
-
-
-
-
-
-
-
-
-
 
 
 
