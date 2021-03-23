@@ -66,7 +66,7 @@ def show_score(nice,mean,name):
 
 
 def score(nice, mean, name):
-    if nice > 2:    #if condition is valud, call win function passing in the variables so it can use them
+    if nice > 2:    #if condition is value, call win function passing in the variables so it can use them
         win(nice,mean,name)
     if mean > 2:    # if condition is valid, call lose function passing in the variables so it can use them
         lose(nice,mean,name)
@@ -76,8 +76,7 @@ def score(nice, mean, name):
 
 def win(nice,mean,name):
     playsound('mySound.wav')
-    print("\n░░░░░░░░░░░░░░░░░░░░░░█████████\n░░███████░░░░░░░░░░███▒▒▒▒▒▒▒▒███\n░░█▒▒▒▒▒▒█░░░░░░░███▒▒▒▒▒▒▒▒▒▒▒▒▒███\n░░░█▒▒▒▒▒▒█░░░░██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██\n░░░░█▒▒▒▒▒█░░░██▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒███\n░░░░░█▒▒▒█░░░█▒▒▒▒▒▒████▒▒▒▒████▒▒▒▒▒▒██\n░░░█████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██\n░░░█▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒██\n░██▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒██▒▒▒▒▒▒▒▒▒▒██▒▒▒▒██\n██▒▒▒███████████▒▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒▒▒▒██\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒████████▒▒▒▒▒▒▒██\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██\n░█▒▒▒███████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██\n░██▒▒▒▒▒▒▒▒▒▒████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█\n░░████████████░░░█████████████████\n",
-          "Nice job {}, you win! \nEveryone loves you and you've made lots of friends along the way!".format(name))
+    print("Nice job {}, you win! \nEveryone loves you and you've made lots of friends along the way!".format(name))
     again(nice,mean,name)
 
 def lose(nice, mean, name):
