@@ -36,6 +36,6 @@ with conn:
     varPerson = cur.fetchall()
     for item in varPerson:
         msg = "First Name: {} \nLast Name: {} \nEmail: {}".format(item[0], item[1], item[2])
-        print(msg)
+    print(msg)
     
         
