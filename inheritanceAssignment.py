@@ -13,7 +13,7 @@ class Computer:  # Create class: Computer
         self.storage = storage
         self.RAM = RAM
 
-    def __repr__(self):     # Return a printable representation of our object
+    def config(self):  # Return a printable representation of our object
         return '\n'.join(['Brand: ' + self.brand, 'CPU: ' + self.CPU, 'GPU: ' + self.GPU, 'Storage: ' + self.storage,
                           'RAM: ' + self.RAM])
 
@@ -27,17 +27,27 @@ class mobilePhone(Computer):
         self.batterySize = batterySize
         self.screenSize = screenSize
 
+    def config(self):
+        return '\nBrand: {}\nStorage: {}\nBattery Size: {}\nScreen Size: {}\n'.format(self.brand, self.storage,
+                                                                                      self.batterySize, self.screenSize)
+
 
 # Child class of Computer class
 class gameConsole(Computer):
     numberOfControllers = 0
     color = ''
 
-    def __init__(self, numberOfControllers, color):
+    def __init__(self, numberOfControllers, color, brand):
         self.numberOfControllers = numberOfControllers
         self.color = color
+        self.brand = brand
+
+    def config(self):
+        return '\nBrand: {}\nStorage: {}\nNumber of Controllers: {}\nConsole Color: ' \
+               '{}'.format(self.brand, self.storage, self.numberOfControllers, self.color)
 
 
 # Create our computer object and print that object
-config = Computer('Dell', '8700k', 'GTX 1080', '1TB', '8GB')
-print(config)
+myPC = Computer('Dell', '8700k', 'GTX 1080', '1TB', '8GB')
+myPhone = mobilePhone('Apple', )
+print(Computer.config(myPC))
