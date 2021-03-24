@@ -1,8 +1,8 @@
-def moveZerosToEnd(arr, n):     # Define function with parameters arr and len(arr)
+def moveZerosToEnd(arr, n):  # Define function with parameters arr and len(arr)
     count = 0  # Count non-zero elements
 
     for i in range(n):
-        if arr[i] != 0:
+        if arr[i] != 0 and type(arr[i]) == int:
             arr[count] = arr[i]
             count += 1
 
@@ -11,7 +11,7 @@ def moveZerosToEnd(arr, n):     # Define function with parameters arr and len(ar
         count += 1
 
 
-arr = [1, 9, 0, 5, 3, 4, 1, 0, 0, 3, 4]
+arr = [False, 1, 0, 1, 2, 0, 1, 3, "a"]
 n = len(arr)
 moveZerosToEnd(arr, n)
 print(arr)

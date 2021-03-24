@@ -1,22 +1,24 @@
-class Computer:
+class Computer:  # Create class: Computer
     brand = ''
     CPU = ''
     GPU = ''
     storage = ''
     RAM = ''
 
-    def __init__(self, brand, CPU, GPU, storage, RAM):
+    def __init__(self, brand, CPU, GPU, storage,  # Initializing our class so was can store values in its attributes
+                 RAM):
         self.brand = brand
         self.CPU = CPU
         self.GPU = GPU
         self.storage = storage
         self.RAM = RAM
 
-    def __repr__(self):
+    def __repr__(self):     # Return a printable representation of our object
         return '\n'.join(['Brand: ' + self.brand, 'CPU: ' + self.CPU, 'GPU: ' + self.GPU, 'Storage: ' + self.storage,
                           'RAM: ' + self.RAM])
 
 
+# Child class of Computer class
 class mobilePhone(Computer):
     batterySize = ''
     screenSize = ''
@@ -26,6 +28,7 @@ class mobilePhone(Computer):
         self.screenSize = screenSize
 
 
+# Child class of Computer class
 class gameConsole(Computer):
     numberOfControllers = 0
     color = ''
