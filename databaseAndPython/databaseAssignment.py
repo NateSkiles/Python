@@ -6,16 +6,11 @@ fileList = ('information.dox', 'hello.txt', 'myImage.png', \
             'myMovie.mpg', 'World.txt', 'data.pdf', 'myPhono.jpg')
 y = '.txt'
 
-
-
 with conn:
     cur = conn.cursor()
     cur.execute('CREATE TABLE IF NOT EXISTS tbl_files( \
                     FileID INTEGER PRIMARY KEY AUTOINCREMENT, \
                     col_fileName TEXT)')
-    conn.commit()
-conn.close
-
 
 
 for file in fileList:
