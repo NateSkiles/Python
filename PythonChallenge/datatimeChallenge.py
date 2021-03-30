@@ -19,7 +19,7 @@ def formatTime(myTime):  # Format our time to readable a readable output
 
 
 def officeHours(x):
-    x = datetime.datetime.strptime(formatTime(x), "%H:%M")  # Store time as string
+    x = datetime.datetime.strptime(formatTime(x), "%H:%M")  # Store time, as string
     start = datetime.datetime.strptime("9:00", "%H:%M")     # Open time as a string
     end = datetime.datetime.strptime("17:00", "%H:%M")      # Close time as string
     # If x is within the limits of 9am-5pm: return True; else return false
