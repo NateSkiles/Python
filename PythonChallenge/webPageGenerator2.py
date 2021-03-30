@@ -15,27 +15,28 @@ from tkinter import *
 class ParentWindow(Frame):
     def __init__(self, master, *args, **kwargs):
         Frame.__init__(self, master, *args, **kwargs)
-
+        # Define frame
         self.master = master
         self.master.minsize(325, 150)
         self.master.maxsize(325, 150)
         self.master.title('Web Page Gene')
-
+        # Add a label and entry box widget for our users to enter their body text
         self.lbl_userInput = tk.Label(self.master, text='What would you like the body of your webpage to say : ')
         self.lbl_userInput.grid(row=0, column=0, sticky=N+W, pady=(10, 10), padx=(5, 5))
         self.entry_userInput = tk.Entry(self.master, text='')
         self.entry_userInput.grid(row=1, column=0, columnspan=2, rowspan=3, ipady=4)
-
-        self.btn_userInput = tk.Button(self.master, text='Submit', width=10, height=2, command=lambda: htmlGene(self))
+        # Button to submit text and create web page.
+        self.btn_userInput = tk.Button(self.master, text='Submit', width=10, height=2,
+                                       command=lambda: htmlGene(self))
         self.btn_userInput.grid(row=4, column=0, padx=(5, 5), pady=(10, 10))
-
+        # This function will take the user entry & concatenate it into the html code
         def htmlGene(self):
             userEntry = self.entry_userInput.get()
             x = "<html><body><h1>" + userEntry + "</h1></body></html> "
-            f = open("SummerSale.html", "w")
-            f.write(x)
+            f = open("SummerSale.html", "w")        # Create file if none exists
+            f.write(x)                              # Write our string to the file
             f.close()
-            webbrowser.open("SummerSale.html")
+            webbrowser.open("SummerSale.html")      # Open file in browser
 
 
 
