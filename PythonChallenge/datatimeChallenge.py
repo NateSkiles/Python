@@ -31,9 +31,9 @@ def officeHours(x):
 
 def openClose(localTime):
     if officeHours(localTime):  # If officeHours is True, print open
-        print('Office is open!')
+        print('Office is open! \n')
     else:
-        print('Office is closed.')
+        print('Office is closed. \n')
 
 
 time = pytz.utc.localize(datetime.datetime.utcnow())    # Current UTC time
@@ -43,12 +43,12 @@ ldnTime = time.astimezone(pytz.timezone('Europe/London'))           # local to o
 
 print('Portland Office:')
 print('Local time:', (formatTime(pdxTime)))
-print(openClose(pdxTime))
+openClose(pdxTime)
 
 print('New York Office:')
 print('Local time:', (formatTime(nycTime)))
-print(openClose(nycTime))
+openClose(nycTime)
 
 print('London Office:')
 print('Local time:', (formatTime(ldnTime)))
-print(openClose(ldnTime))
+openClose(ldnTime)
