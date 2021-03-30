@@ -30,7 +30,7 @@ def officeHours(x):
 
 
 def openClose(localTime):
-    if officeHours(localTime):  # If officeHourse is True, print open
+    if officeHours(localTime):  # If officeHours is True, print open
         print('Office is open!')
     else:
         print('Office is closed.')
