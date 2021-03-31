@@ -1,0 +1,26 @@
+--	One Minute Changes	--
+** Stage 1:
+D -> A
+D -> E
+A -> E
+
+** Stage 2:
+Am -> E
+Am -> Dm
+A -> Dm
+E -> D
+Em -> D
+
+**Stage 3:
+C -> Am
+C -> A
+C -> G   
+G -> E
+G -> D
+
+** Stage 4:
+C -> G7
+C7  -> Fmaj7
+E -> B7
+G -> C
+G -> A
