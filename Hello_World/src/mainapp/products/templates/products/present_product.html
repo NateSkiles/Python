@@ -6,21 +6,22 @@
 
 {% block content %}
 
-<div class="admin_panel">
-    <form name="productForm" method="POST" action="../details/">
-        <table>
-            {% csrf_token %}
-            {{ form.non_field_errors }}
-            {{ form.as_table }}
-        </table>
-        <div class="frmBtn_container">
-            <ul>
-                <li><a href="../{{ form.pk }}delete/">Delete</a></li>
-                <li><a href="{% url 'admin_console' %}">Cancel</a></li>
-            </ul>
-        </div>
+    <div class="admin_panel">
+        <form method="POST" id="thisForm" action="../details/">
+            <table>
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {{ form.as_table }}
+            </table>
+            <div class="frmBtn_container">
+                <input type="submit">
+                <div class="frmBtn_container">
+                    <button class="btn"><a href="../{{ form.pk }}delete/">Delete</a></button>
+                   <button class="btn"><a href="{% url 'admin_console' %}">Cancel</a></button>
+                </div>
+            </div>
 
-    </form>
-</div>
+        </form>
+    </div>
 
 {% endblock %}
