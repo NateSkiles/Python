@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Royal Hotels{% endblock %}
+
+{% block header %}Product Details:  {% endblock %}
+
+{% block content %}
+
+<div class="admin_panel">
+    <form name="productForm" method="POST" action="../details/">
+        <table>
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_table }}
+        </table>
+        <div class="frmBtn_container">
+            <ul>
+                <li><a href="../{{ form.pk }}delete/">Delete</a></li>
+                <li><a href="{% url 'admin_console' %}">Cancel</a></li>
+            </ul>
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}
