@@ -15,7 +15,7 @@ TITLE_CHOICE = {
 
 # Create your models here.
 class Account(models.Model):  # Model for Users
-    # title = models.CharField(max_length=5, choices=TITLE_CHOICE, blank=True, null=False)
+    title = models.CharField(max_length=5, choices=TITLE_CHOICE, blank=True, null=False)
     firstName = models.CharField("First Name", max_length=15)
     lastName = models.CharField("Last Name", max_length=15)
     startBal = models.DecimalField("Starting Balance", default=0.00, decimal_places=2, max_digits=10)
@@ -31,7 +31,7 @@ class Transaction(models.Model):  # Transaction model
     type = models.CharField("Type of Transaction", max_length=10, choices=TRANSACTION_CHOICES, default="---")
     amount = models.DecimalField(default=0.00, max_digits=10, decimal_places=2)
     description = models.CharField(max_length=255, default="", blank=True, null=False)
-    accountNum = models.ForeignKey(Account, on_delete=models.CASCADE)
+    account = models.ForeignKey(Account, on_delete=models.CASCADE)
 
-    Transaction = models.Manager()
+    Transactions = models.Manager()
 

@@ -3,7 +3,7 @@
 {% block content %}
     <h3>CREATE NEW ACCOUNT</h3>
     <div id="account-form">
-        <form>
+        <form method="POST">
             <!--    Use a token to verify form, then display form as <p>    -->
             {% csrf_token %}
             {{form.as_p}}
